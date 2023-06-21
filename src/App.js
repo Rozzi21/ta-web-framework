@@ -1,25 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import HomePages from "./pages/HomePages"
+import TambahPinjamPages from "./pages/TambahPinjamPages"
+import DaftarPinjamPages from './pages/DaftarPinjamPages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<Routes>
+  <Route path="/" element={<HomePages/>}/>
+  <Route path="/tambah" element={<TambahPinjamPages/>}/>
+  <Route path="/daftarPeminjam" element={<DaftarPinjamPages/>}/>
+  <Route path="/total" element={<HomePages/>}/>
+</Routes>
+  )
 }
 
 export default App;
